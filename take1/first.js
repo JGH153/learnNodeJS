@@ -3,11 +3,15 @@ var http = require('http');
 var mysql = require('mysql');
 
 function onRequest(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.writeHead(200, {"Content-Type": "text/html"});
   response.write("Hello World YOLO SWAG =)");
 
   console.log("request:", request.url);
   response.write("request: <br>"+request.url);
+
+  if(request.url == "/vg"){
+      response.write("Welcome to VG!");
+  }
 
 
   response.end();
