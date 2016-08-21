@@ -1,0 +1,4 @@
+semantic versoning:
+1.5.8 -> major.minor.patch
+patch for fix, minor for new features but still backward compatable and major for breaking
+http://semver.org/

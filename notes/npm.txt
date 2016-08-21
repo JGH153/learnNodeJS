@@ -1,0 +1,3 @@
+use npm init for setting up pagage.json
+
+use "npm install {name} --save" for installing and adding to pagage.json
