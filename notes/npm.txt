@@ -1,3 +1,29 @@
 use npm init for setting up pagage.json
 
 use "npm install {name} --save" for installing and adding to pagage.json
+
+use "npm install {name} --save-dev" for installing and adding to pagage.json, but only for development
+
+use "npm install -g nodemon" for installing nodemon globally on computer
+
+having automativ updating:
+"moment": "2.14.1" = only this version
+"moment": "~2.14.1" = only patches (.1)
+"moment": "^2.14.1" = only patch and minor updates (.14.1)
+
+"npm install" for installing
+"npm update" for updating
+
+Examples:
+	npm install installs all modules that are listed on package.json file and their dependencies.
+	npm update updates all packages in the node_modules directory and their dependencies.
+	npm install express installs only the express module and its dependencies.
+	npm update express updates the express module and its dependencies.
+
+requiering from node_modules just using name like "require("moment");"
+
+best pracsise is to run npm install on deplyment server instead of SFTP pushing all files in that folder from dev
+
+use nodemon instead of node for "automatically restart when your code changes"
+"npm install -g nodemon"
+http://nodemon.io/

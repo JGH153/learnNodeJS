@@ -1,5 +1,6 @@
 var http = require('http');
 var fs = require("fs"); //file module
+var moment = require("moment");
 
 var templateVariables = [
 	{name: "MessageName", value: "Greger"},
@@ -12,11 +13,7 @@ var myObj = {
 	last: "Hemb"
 }
 
-//semantic versoning:
-// 1.5.8 -> major.minor.patch
-//patch for fix, minor for new features but still backward compatable and major for breaking
-// http://semver.org/
-
+console.log(moment().format("ddd, hA"));
 
 http.createServer(function(request, responce){
 
@@ -32,7 +29,7 @@ http.createServer(function(request, responce){
 	}else{
 
 		responce.writeHead(404);
-		responce.end("404 not found");
+		responce.end("404 not found!");
 
 	}
 
