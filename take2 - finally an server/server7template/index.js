@@ -1,3 +1,5 @@
+"use strict"
+
 var express = require("express");
 var app = express();
 
@@ -5,18 +7,20 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 //expose public folder under /assets automaticly
-app.use('/assets', express.static(__dirname + "/public"));
+app.use('/assets', express.static(__dirname + '/public'));
+
+//set template engine
+app.set('view engine', 'ejs');
 
 //do it manually
-app.use('/', function(request, responce, next){
-	console.log("URL: "+request.url);
+app.use('/', function (request, responce, next) {
+	console.log('Request Url:' + request.url);
 	next();
 });
 
-app.get('/', function(request, responce){
+app.get('/', function(request, responce) {
 
-	responce.send('<html><head><link rel="stylesheet" type="text/css" href="assets/style.css"></head><body><h1>Hello</h1></body></html>');
-	//responce.send('<html><head></head><body><h1>Hello</h1></body></html>');
+	responce.render('index');
 
 });
 
