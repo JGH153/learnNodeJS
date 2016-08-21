@@ -12,7 +12,7 @@ app.use('/assets', express.static(__dirname + '/public'));
 //set template engine
 app.set('view engine', 'ejs');
 
-//do it manually
+//middleware
 app.use('/', function (request, responce, next) {
 	console.log('Request Url:' + request.url);
 	next();
@@ -24,10 +24,9 @@ app.get('/', function(request, responce) {
 
 });
 
-app.get('/person/:id', function(request, responce){
+app.get('/person/:id', function(request, responce) {
 
-	let id = request.params.id;
-	responce.send("<html><head></head><body><h1>Hello "+id+"</h1></body></html>")
+	responce.render('person', { ID: request.params.id });
 
 });
 
