@@ -27,3 +27,8 @@ best pracsise is to run npm install on deplyment server instead of SFTP pushing 
 use nodemon instead of node for "automatically restart when your code changes"
 "npm install -g nodemon"
 http://nodemon.io/
+
+
+Use express-generator for setting up and application skeleton
+first install globally by: "npm install express-generator -g"
+then create by "express newFolderName"
