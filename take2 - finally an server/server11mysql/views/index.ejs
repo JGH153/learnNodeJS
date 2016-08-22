@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link href="assets/style.css" type="text/css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+	</head>
+	<body>
+		<h1>Hello fuckers, and <%=name%></h1>
+		<h2><%=messageInfo%></h2>
+		<h3><%=messageHelp%></h3>
+
+		<form method="post" action="/person">
+			<b>New Age:</b> <br>
+			<input type="text" name="age">
+			<input type="submit" value="Save"></button>
+		</form>
+		<script>
+			<!-- Just doing a JSON post on page load -->
+			$.ajax({
+				type: "POST",
+				url: "/personjson",
+				data: JSON.stringify({ age: 50 }),
+				dataType: 'json',
+				contentType: 'application/json'
+			});
+		</script>
+
+	</body>
+</html>

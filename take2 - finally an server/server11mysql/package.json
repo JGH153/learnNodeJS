@@ -1,0 +1,22 @@
+{
+  "name": "server5npm",
+  "version": "1.0.0",
+  "description": "An app for learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "moment": "^2.14.1",
+    "mongoose": "^4.5.9",
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
